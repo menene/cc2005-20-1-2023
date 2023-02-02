@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="erickmarroquin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-02 06:41:59 AM"/>
+        <attribute name="created" value="ZXJpY2ttYXJyb3F1aW47RVJJQ0tTLU0xLVBSTzsyMDIzLTAyLTAyOzA2OjM1OjQyIEFNOzM2ODI="/>
+        <attribute name="edited" value="ZXJpY2ttYXJyb3F1aW47RVJJQ0tTLU0xLVBSTzsyMDIzLTAyLTAyOzA2OjQxOjU5IEFNOzE7Mzc5NQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="opcion" type="Integer" array="False" size=""/>
+            <assign variable="opcion" expression="0"/>
+            <while expression="opcion != 4">
+                <output expression="&quot;=== Ingrese una opcion ===&quot;" newline="True"/>
+                <output expression="&quot;1. Ingreso&quot;" newline="True"/>
+                <output expression="&quot;2. Egreso&quot;" newline="True"/>
+                <output expression="&quot;3. Reporte&quot;" newline="True"/>
+                <output expression="&quot;4. Salir&quot;" newline="True"/>
+                <input variable="opcion"/>
+                <if expression="opcion == 1">
+                    <then>
+                        <output expression="&quot;Proceso para ingreso...&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <if expression="opcion == 2">
+                            <then>
+                                <output expression="&quot;Proceso para egreso&quot;" newline="True"/>
+                            </then>
+                            <else>
+                                <if expression="opcion == 3">
+                                    <then>
+                                        <output expression="&quot;Proceso para reporte&quot;" newline="True"/>
+                                    </then>
+                                    <else/>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </while>
+            <output expression="&quot;Feliz dia&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
