@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="erickmarroquin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-16 10:14:52 AM"/>
+        <attribute name="created" value="ZXJpY2ttYXJyb3F1aW47RVJJQ0tTLU0xLVBSTzsyMDIzLTAyLTAyOzA2OjM1OjQyIEFNOzM2ODI="/>
+        <attribute name="edited" value="ZXJpY2ttYXJyb3F1aW47RVJJQ0tTLU0xLVBSTzsyMDIzLTAyLTE2OzEwOjE0OjUyIEFNOzQ7Mzc5MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="opcion" type="Integer" array="False" size=""/>
+            <declare name="largo" type="Integer" array="False" size=""/>
+            <declare name="radio" type="Integer" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="opcion" expression="0"/>
+            <while expression="opcion != 3">
+                <output expression="&quot;=== Ingrese una opcion ===&quot;" newline="True"/>
+                <output expression="&quot;1. Dibujar cuadrado&quot;" newline="True"/>
+                <output expression="&quot;2. Dibujar circulo&quot;" newline="True"/>
+                <output expression="&quot;3. Salir&quot;" newline="True"/>
+                <input variable="opcion"/>
+                <if expression="opcion == 1">
+                    <then>
+                        <comment text="Limpiar pantalla"/>
+                        <output expression="&quot;Ingrese el largo del cuadrado&quot;" newline="True"/>
+                        <input variable="largo"/>
+                        <for variable="i" start="0" end="4" direction="inc" step="1">
+                            <forward expression="largo" pen="down"/>
+                            <turn expression="90" rotate="right"/>
+                        </for>
+                    </then>
+                    <else>
+                        <if expression="opcion == 2">
+                            <then>
+                                <comment text="Limpiar pantalla"/>
+                                <output expression="&quot;Ingrese el radio del circulo&quot;" newline="True"/>
+                                <input variable="radio"/>
+                                <comment text="dibujar circulo"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </else>
+                </if>
+            </while>
+            <output expression="&quot;Feliz dia&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
