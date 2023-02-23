@@ -23,4 +23,5 @@ def resta(n1, n2):
 
 
 def saludo(nombre="Nombre Genérico"):
+    """retorna un saludo personalizado o con un nombre generico"""
     return "Hola " + nombre
