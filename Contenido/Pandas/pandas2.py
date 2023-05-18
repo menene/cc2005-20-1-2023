@@ -86,8 +86,25 @@ fantasmas_poderosos = pokedex.query("`Attack` >= 100 and `Type 1` == 'Ghost'")
 
 # top_fantasmas = fantasmas_poderosos.iloc[0:3, 1:10:8]
 # print(top_fantasmas)
-
+print("ORIGINAL: ")
 print(fantasmas_poderosos[["Name", "HP", "Attack", "Defense"]])
+print("================")
 
-fantasmas_poderosos[["Name", "HP", "Attack", "Defense"]].to_csv(
-    "poderosos_fantasmas.csv")
+# fantasmas_poderosos[["Name", "HP", "Attack", "Defense"]].to_csv(
+#     "poderosos_fantasmas.csv")
+
+
+index = fantasmas_poderosos.index[
+    fantasmas_poderosos['Name'] == 'Banette'].tolist()
+
+print("INDICE: ")
+
+
+print(index)
+print("================")
+
+
+print("EDITADO: ")
+fantasmas_poderosos.loc[index, 'Name'] = 'Banette Editado'
+
+# print(fantasmas_poderosos)
